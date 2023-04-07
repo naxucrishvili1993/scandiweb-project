@@ -1,0 +1,100 @@
+@import "config";
+@import "addProduct";
+
+body {
+	background-color: $bg-color;
+	color: $primary-color;
+
+	.header {
+		align-items: center;
+		border-bottom: 3px solid $primary-color;
+		justify-content: space-between;
+		margin-bottom: 3rem;
+		padding: 0 2%;
+		@include d-flex(0);
+		&-left {
+			h1 {
+				font-size: 1.5rem;
+			}
+		}
+		&-right {
+			@include d-flex(0.5rem);
+			a {
+				button {
+					&:hover {
+						background-color: green;
+						border-color: green;
+						color: white;
+					}
+				}
+			}
+			button,
+			input {
+				border: 2px solid $primary-color;
+				border-radius: 8px;
+				color: $primary-color;
+				cursor: pointer;
+				font-weight: bold;
+				letter-spacing: 1px;
+				padding: 0.4rem 1rem;
+				@include transition-ease;
+			}
+			#delete-product-btn {
+				color: $primary-color;
+				&:hover {
+					background-color: rgb(227, 37, 37);
+					border-color: rgb(227, 37, 37);
+					color: white;
+				}
+			}
+		}
+	}
+
+	.products {
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding: 2rem;
+		@include d-flex(20px);
+		&-item {
+			background-color: $card-color;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			min-width: fit-content;
+			padding: 1rem;
+			/* Position relative for the checkbox */
+			position: relative;
+			text-align: center;
+			width: 200px;
+
+			&-col {
+				font-weight: bold;
+				font-size: 1.1rem;
+				word-wrap: wrap;
+				&:nth-of-type(1) {
+					font-size: 1.3rem;
+					letter-spacing: 1px;
+				}
+			}
+			input {
+				left: 7%;
+				position: absolute;
+				top: 7%;
+			}
+		}
+	}
+	@include media-sm {
+		.header {
+			h1 {
+				font-size: 2rem;
+			}
+			&-right {
+				@include d-flex(1rem);
+			}
+		}
+		.products {
+			align-items: start;
+			justify-content: flex-start;
+		}
+	}
+}

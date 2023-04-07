@@ -1,0 +1,22 @@
+$primary-color: #234586;
+$bg-color: #e8e5e4;
+$card-color: #f8f8f8;
+
+* {
+	box-sizing: border-box;
+}
+
+@mixin d-flex($gap) {
+	display: flex;
+	gap: $gap;
+}
+
+@mixin transition-ease {
+	transition: all 0.2s ease-in-out;
+}
+
+@mixin media-sm {
+	@media only screen and (min-width: 576px) {
+		@content;
+	}
+}

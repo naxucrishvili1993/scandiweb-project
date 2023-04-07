@@ -1,0 +1,89 @@
+body {
+	.header {
+		.add-product-btns {
+			input {
+				border: 2px solid $primary-color;
+				border-radius: 8px;
+				color: $primary-color;
+				cursor: pointer;
+				font-weight: bold;
+				letter-spacing: 1px;
+				padding: 0.4rem 1rem;
+				@include transition-ease;
+				&:hover {
+					background-color: $primary-color !important;
+					color: white;
+				}
+			}
+			a {
+				button:hover {
+					background-color: $primary-color !important;
+					border-color: $primary-color;
+				}
+			}
+		}
+	}
+
+	#product_form {
+		padding: 0 1rem;
+		label {
+			font-size: 1.2rem;
+		}
+		.info-div,
+		.type-form {
+			align-items: start;
+			flex-direction: column;
+			margin-bottom: 1rem;
+			@include d-flex(0.5rem);
+
+			input {
+				border: 1px solid $primary-color;
+				border-radius: 8px;
+				height: 30px;
+				outline: none;
+				padding-left: 10px;
+			}
+			.sku-err {
+				color: red !important;
+				display: block !important;
+				letter-spacing: 1px;
+			}
+		}
+		.type-switch-div {
+			align-items: center;
+			@include d-flex(0.5rem);
+			#productType {
+				border: 1px solid $primary-color;
+				border-radius: 8px;
+				height: 30px;
+				outline: none;
+				padding-left: 10px;
+			}
+		}
+		#product-info {
+			display: none;
+		}
+
+		.type-form {
+			margin-top: 1rem;
+			&-book,
+			&-dvd {
+				flex-direction: column;
+				@include d-flex(0.5rem);
+			}
+			&-div {
+				div {
+					flex-direction: column;
+					@include d-flex(0.5rem);
+					margin-bottom: 0.5rem;
+				}
+			}
+			.hidden {
+				display: none;
+			}
+		}
+	}
+
+	@include media-sm {
+	}
+}

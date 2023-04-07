@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body .header .add-product-btns input {
+  border: 2px solid #234586;
+  border-radius: 8px;
+  color: #234586;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 0.4rem 1rem;
+  transition: all 0.2s ease-in-out;
+}
+body .header .add-product-btns input:hover {
+  background-color: #234586 !important;
+  color: white;
+}
+body .header .add-product-btns a button:hover {
+  background-color: #234586 !important;
+  border-color: #234586;
+}
+body #product_form {
+  padding: 0 1rem;
+}
+body #product_form label {
+  font-size: 1.2rem;
+}
+body #product_form .info-div,
+body #product_form .type-form {
+  align-items: start;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+body #product_form .info-div input,
+body #product_form .type-form input {
+  border: 1px solid #234586;
+  border-radius: 8px;
+  height: 30px;
+  outline: none;
+  padding-left: 10px;
+}
+body #product_form .info-div .sku-err,
+body #product_form .type-form .sku-err {
+  color: red !important;
+  display: block !important;
+  letter-spacing: 1px;
+}
+body #product_form .type-switch-div {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+body #product_form .type-switch-div #productType {
+  border: 1px solid #234586;
+  border-radius: 8px;
+  height: 30px;
+  outline: none;
+  padding-left: 10px;
+}
+body #product_form #product-info {
+  display: none;
+}
+body #product_form .type-form {
+  margin-top: 1rem;
+}
+body #product_form .type-form-book, body #product_form .type-form-dvd {
+  flex-direction: column;
+  display: flex;
+  gap: 0.5rem;
+}
+body #product_form .type-form-div div {
+  flex-direction: column;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+body #product_form .type-form .hidden {
+  display: none;
+}
+body {
+  background-color: #e8e5e4;
+  color: #234586;
+}
+body .header {
+  align-items: center;
+  border-bottom: 3px solid #234586;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding: 0 2%;
+  display: flex;
+  gap: 0;
+}
+body .header-left h1 {
+  font-size: 1.5rem;
+}
+body .header-right {
+  display: flex;
+  gap: 0.5rem;
+}
+body .header-right a button:hover {
+  background-color: green;
+  border-color: green;
+  color: white;
+}
+body .header-right button,
+body .header-right input {
+  border: 2px solid #234586;
+  border-radius: 8px;
+  color: #234586;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 0.4rem 1rem;
+  transition: all 0.2s ease-in-out;
+}
+body .header-right #delete-product-btn {
+  color: #234586;
+}
+body .header-right #delete-product-btn:hover {
+  background-color: rgb(227, 37, 37);
+  border-color: rgb(227, 37, 37);
+  color: white;
+}
+body .products {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  display: flex;
+  gap: 20px;
+}
+body .products-item {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding: 1rem;
+  /* Position relative for the checkbox */
+  position: relative;
+  text-align: center;
+  width: 200px;
+}
+body .products-item-col {
+  font-weight: bold;
+  font-size: 1.1rem;
+  word-wrap: wrap;
+}
+body .products-item-col:nth-of-type(1) {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+body .products-item input {
+  left: 7%;
+  position: absolute;
+  top: 7%;
+}
+@media only screen and (min-width: 576px) {
+  body .header h1 {
+    font-size: 2rem;
+  }
+  body .header-right {
+    display: flex;
+    gap: 1rem;
+  }
+  body .products {
+    align-items: start;
+    justify-content: flex-start;
+  }
+}/*# sourceMappingURL=main.css.map */
