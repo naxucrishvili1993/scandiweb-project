@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import React, { useState, useRef } from "react";
 
 const TypeSwitcher = (props) => {
@@ -8,13 +9,21 @@ const TypeSwitcher = (props) => {
 	const furnitureHeightRef = useRef("");
 	const furnitureWidthRef = useRef("");
 	const furnitureLengthRef = useRef("");
-	const inputRefs = useRef([]);
+	const firstRefEl = useRef();
+	const inputRefs = useRef([firstRefEl.current]);
+	let typeChanged = false;
 	const handleTypeChange = (e) => {
+		typeChanged = true;
 		// Reset previous input elements and replace with new one(s)
 		inputRefs.current = [];
 		setActiveType(e.target.value);
 		// Send current input elements to the parent component
 		props.catchTypeInputs(inputRefs.current);
+	};
+	const checkIfTypeChanged = () => {
+		if (!typeChanged) {
+			props.catchTypeInputs(firstRefEl.current);
+		}
 	};
 	const handleFeatureChange = (e) => {
 		// Prepare pre-text for possible product types
@@ -97,8 +106,11 @@ const TypeSwitcher = (props) => {
 						name="dvd-size"
 						ref={
 							activeType === "dvd"
-								? (element) =>
-										(inputRefs.current[inputRefs.current.length] = element)
+								? (element) => {
+										inputRefs.current[inputRefs.current.length] = element;
+										firstRefEl.current = element;
+										checkIfTypeChanged();
+								  }
 								: null
 						}
 					/>
