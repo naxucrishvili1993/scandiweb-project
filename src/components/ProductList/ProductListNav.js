@@ -15,7 +15,7 @@ const ProductListNav = (props) => {
 			</div>
 			<div className="header-right">
 				<Link to="/addProduct">
-					<button>Add</button>
+					<button>ADD</button>
 				</Link>
 				<form
 					action="https://product-app-2023.000webhostapp.com/index.php/"
@@ -34,7 +34,7 @@ const ProductListNav = (props) => {
 						name="submit"
 						onClick={handleClick}
 					>
-						Mass Delete
+						MASS DELETE
 					</button>
 				</form>
 			</div>
