@@ -11,7 +11,7 @@ const ProductList = () => {
 		// firstRender ref to avoid 1 extra render caused by React.StrictMode
 		if (firstRender.current) {
 			axios
-				.get("http://localhost:80/scandiweb-with-react/index.php/")
+				.get("https://product-app-2023.000webhostapp.com/index.php/")
 				.then((response) => {
 					setData(response.data);
 				})

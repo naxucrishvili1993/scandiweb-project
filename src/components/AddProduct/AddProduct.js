@@ -25,7 +25,7 @@ const AddProduct = (props) => {
 			<AddProductNav />
 			<form
 				onSubmit={handleSubmit}
-				action="http://localhost:80/scandiweb-with-react/addProduct.php/"
+				action="https://product-app-2023.000webhostapp.com/addProduct.php/"
 				method="post"
 				id="product_form"
 				noValidate

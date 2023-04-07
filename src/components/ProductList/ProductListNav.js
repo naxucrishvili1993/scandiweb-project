@@ -18,7 +18,7 @@ const ProductListNav = (props) => {
 					<button>Add</button>
 				</Link>
 				<form
-					action="http://localhost:80/scandiweb-with-react/index.php/"
+					action="https://product-app-2023.000webhostapp.com/index.php/"
 					method="post"
 					id="mass-delete-form"
 				>
