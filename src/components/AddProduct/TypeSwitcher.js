@@ -1,5 +1,4 @@
-import { type } from "@testing-library/user-event/dist/type";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const TypeSwitcher = (props) => {
 	const [productInfo, setProductInfo] = useState("");
@@ -12,6 +11,10 @@ const TypeSwitcher = (props) => {
 	const firstRefEl = useRef();
 	const inputRefs = useRef([firstRefEl.current]);
 	let typeChanged = false;
+
+	useEffect(() => {
+		props.catchActiveType(activeType);
+	}, [activeType]);
 	const handleTypeChange = (e) => {
 		typeChanged = true;
 		// Reset previous input elements and replace with new one(s)

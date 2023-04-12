@@ -18,7 +18,7 @@ const ProductListNav = (props) => {
 					<button>ADD</button>
 				</Link>
 				<form
-					action="https://product-app-2023.000webhostapp.com/index.php/"
+					action="https://product-app-2023.000webhostapp.com/deleteProduct.php/"
 					method="post"
 					id="mass-delete-form"
 				>

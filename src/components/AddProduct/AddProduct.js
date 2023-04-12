@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AddProductNav from "./AddProductNav";
 import TypeSwitcher from "./TypeSwitcher";
 import { useRef } from "react";
@@ -6,6 +6,7 @@ import { useRef } from "react";
 const AddProduct = (props) => {
 	const typeInputs = useRef([]);
 	const everyInputRef = useRef([]);
+	const [activeType, setActiveType] = useState("Dvd");
 	const handleSubmit = (e) => {
 		let unfilledInputs = 0;
 		everyInputRef.current.concat(typeInputs.current).forEach((el) => {
@@ -79,6 +80,19 @@ const AddProduct = (props) => {
 					catchTypeInputs={(e) => {
 						typeInputs.current = e;
 					}}
+					catchActiveType={(e) => {
+						const upperCasedType = e.charAt(0).toUpperCase() + e.slice(1);
+						if (activeType !== upperCasedType) {
+							setActiveType(upperCasedType);
+						}
+					}}
+				/>
+				{/* Handle Active Types */}
+				<input
+					type="hidden"
+					name="active_type"
+					value={activeType}
+					id="active-type"
 				/>
 			</form>
 		</>
